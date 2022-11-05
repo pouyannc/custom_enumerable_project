@@ -5,6 +5,12 @@ module Enumerable
     return self
   end
 
+  def my_select
+    selected = []
+    self.length.times { |i| selected.push(self[i]) if yield self[i]}
+    selected
+  end
+
   
 end
 
